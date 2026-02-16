@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - TI:um</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+    <style>
+        /* 기본 스타일 (메인과 동일) */
+        :root { --primary-color: #006837; --text-dark: #1F2937; --text-light: #6B7280; --bg-light: #F9FAFB; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Pretendard', sans-serif; }
+        body { color: var(--text-dark); background: #fff; }
+        a { text-decoration: none; color: inherit; }
+
+        /* 상세 페이지 헤더 */
+        .page-header { background: white; padding: 20px 5%; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 15px; position: sticky; top: 0; z-index: 1000; }
+        .back-btn { text-decoration: none; color: var(--text-dark); font-weight: bold; font-size: 1.2rem; }
+        .page-title { font-size: 1.5rem; font-weight: 800; color: var(--primary-color); }
+
+        /* 섹션 공통 */
+        section { padding: 80px 5%; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2rem; font-weight: 700; color: var(--primary-color); }
+        .section-title p { color: var(--text-light); }
+
+        /* 1. 조직도 (Hierarchy) */
+        .org-chart { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; text-align: center; margin-bottom: 50px; }
+        .org-box { 
+            background: white; border: 2px solid var(--primary-color); border-radius: 15px; 
+            padding: 30px; width: 280px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .org-box h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--primary-color); }
+        .org-box p { font-size: 0.95rem; color: var(--text-light); }
+        
+        .org-root { background: var(--primary-color); color: white; border: none; margin-bottom: 30px; }
+        .org-root h3 { color: white; }
+        .org-root p { color: rgba(255,255,255,0.9); }
+
+        /* 2. 멤버 그리드 */
+        .members-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; 
+        }
+        .member-card { 
+            text-align: center; border: 1px solid #eee; border-radius: 15px; 
+            padding: 30px; transition: 0.3s;
+        }
+        .member-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: var(--primary-color); }
+        
+        .member-img { 
+            width: 140px; height: 140px; background: #eee; border-radius: 50%; 
+            margin: 0 auto 20px; overflow: hidden; object-fit: cover; border: 3px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .member-role { 
+            display: inline-block; padding: 5px 12px; background: #E8F5E9; color: var(--primary-color); 
+            border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-bottom: 10px;
+        }
+        .member-card h4 { font-size: 1.3rem; margin-bottom: 5px; font-weight: 700; }
+        .member-card p { font-size: 0.95rem; color: var(--text-light); }
+
+        footer { background: #111; color: #888; padding: 40px 5%; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header class="page-header">
+        <a href="index.html" class="back-btn">←</a>
+        <h1 class="page-title">Members</h1>
+    </header>
+
+    <section>
+        <div class="section-title">
+            <h2>Organization</h2>
+            <p>티:움은 효율적인 운영을 위해 체계적으로 역할을 분담합니다.</p>
+        </div>
+
+        <div style="display:flex; justify-content:center;">
+            <div class="org-box org-root">
+                <h3>Executive Board</h3>
+                <p>회장단 및 운영위원회</p>
+            </div>
+        </div>
+
+        <div class="org-chart">
+            <div class="org-box">
+                <h3>Academic Bureau</h3>
+                <p>학술국<br>세미나, 스터디 기획 및 운영</p>
+            </div>
+            <div class="org-box">
+                <h3>External Affairs</h3>
+                <p>대외협력국<br>교내외 교류 및 행사 기획</p>
+            </div>
+            <div class="org-box">
+                <h3>Administration</h3>
+                <p>사무국<br>예산 관리 및 행정 지원</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: var(--bg-light);">
+        <div class="section-title">
+            <h2>Our Team</h2>
+            <p>2026 티:움을 이끌어가는 주역들입니다.</p>
+        </div>
+
+        <div class="members-grid">
+            <div class="member-card">
+                <img src="https://via.placeholder.com/150" alt="멤버사진" class="member-img">
+                <span class="member-role">President</span>
+                <h4>홍길동</h4>
+                <p>첨단융합학부 24학번<br>"함께 성장하는 가치를 믿습니다"</p>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/150" alt="멤버사진" class="member-img">
+                <span class="member-role">VP / Academic</span>
+                <h4>이영희</h4>
+                <p>첨단융합학부 24학번<br>학술국장</p>
+            </div>
+
+            <div class="member-card">
+                <img src="https://via.placeholder.com/150" alt="멤버사진" class="member-img">
+                <span class="member-role">External Affairs</span>
+                <h4>김철수</h4>
+                <p>첨단융합학부 25학번<br>대외협력국장</p>
+            </div>
+            
+            <div class="member-card">
+                <img src="https://via.placeholder.com/150" alt="멤버사진" class="member-img">
+                <span class="member-role">Manager</span>
+                <h4>박지민</h4>
+                <p>첨단융합학부 25학번<br>사무국 운영위원</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 TI:um. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
